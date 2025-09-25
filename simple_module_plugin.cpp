@@ -5,7 +5,7 @@
 #include <QDateTime>
 #include <QJsonArray>
 #include <QJsonObject>
-#include "../../SDK/cpp/token_manager.h"
+#include "token_manager.h"
 
 SimpleModulePlugin::SimpleModulePlugin()
 {
@@ -237,5 +237,4 @@ QString SimpleModulePlugin::processData(const QString &title, int value, const Q
 void SimpleModulePlugin::initLogos(LogosAPI* logosAPIInstance) {
     logosAPI = logosAPIInstance;
 } 
-
 

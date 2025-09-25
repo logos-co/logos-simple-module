@@ -4,8 +4,8 @@
 #include <QtCore/QJsonArray>
 #include <QtCore/QStringList>
 #include "simple_module_interface.h"
-#include "../../SDK/cpp/logos_api.h"
-#include "../../SDK/cpp/logos_api_client.h"
+#include "logos_api.h"
+#include "logos_api_client.h"
 
 class SimpleModulePlugin : public QObject, public SimpleModuleInterface
 {
@@ -35,5 +35,4 @@ signals:
     // for now this is required for events, later it might not be necessary if using a proxy
     void eventResponse(const QString& eventName, const QVariantList& data);
 };
-
 

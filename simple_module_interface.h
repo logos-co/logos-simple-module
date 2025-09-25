@@ -3,7 +3,7 @@
 #include <QtCore/QObject>
 #include <QtCore/QJsonArray>
 #include <QtCore/QStringList>
-#include "../../core/interface.h"
+#include "interface.h"
 
 class SimpleModuleInterface : public PluginInterface
 {
@@ -25,5 +25,4 @@ signals:
 
 #define SimpleModuleInterface_iid "org.logos.SimpleModuleInterface"
 Q_DECLARE_INTERFACE(SimpleModuleInterface, SimpleModuleInterface_iid)
-
 

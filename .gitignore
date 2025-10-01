@@ -1,5 +1,9 @@
 .DS_Store
 build
 .deps/
-vendor/
+vendor/*
+!vendor/logos-liblogos
+!vendor/logos-liblogos/**
+!vendor/logos-cpp-sdk
+!vendor/logos-cpp-sdk/**
 result/

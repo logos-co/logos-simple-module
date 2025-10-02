@@ -26,3 +26,4 @@ signals:
 #define SimpleModuleInterface_iid "org.logos.SimpleModuleInterface"
 Q_DECLARE_INTERFACE(SimpleModuleInterface, SimpleModuleInterface_iid)
 
+

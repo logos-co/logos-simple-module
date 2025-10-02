@@ -7,3 +7,4 @@ vendor/*
 !vendor/logos-cpp-sdk
 !vendor/logos-cpp-sdk/**
 result/
+result

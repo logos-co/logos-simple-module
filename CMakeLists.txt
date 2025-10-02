@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.14)
 project(SimpleModulePlugin LANGUAGES CXX)
 
+include(GNUInstallDirs)
+
 set(CMAKE_AUTOMOC ON)
 
 option(LOGOS_SIMPLE_MODULE_USE_VENDOR "Force use of vendored Logos dependencies" OFF)
@@ -134,3 +136,18 @@ else()
         INSTALL_RPATH "$ORIGIN"
         INSTALL_RPATH_USE_LINK_PATH FALSE)
 endif()
+
+install(TARGETS simple_module_plugin
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/logos/modules
+    RUNTIME DESTINATION ${CMAKE_INSTALL_LIBDIR}/logos/modules
+    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}/logos/modules
+)
+
+install(FILES ${METADATA_JSON}
+    DESTINATION ${CMAKE_INSTALL_DATADIR}/logos-simple-module
+)
+
+install(DIRECTORY "${PLUGINS_OUTPUT_DIR}/"
+    DESTINATION ${CMAKE_INSTALL_DATADIR}/logos-simple-module/generated
+    OPTIONAL
+)

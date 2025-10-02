@@ -238,3 +238,4 @@ void SimpleModulePlugin::initLogos(LogosAPI* logosAPIInstance) {
     logosAPI = logosAPIInstance;
 } 
 
+
